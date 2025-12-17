@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Poetry
+poetry.lock
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Logs
+*.log
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Database
+*.sqlite3
+
+# Tests / coverage
+.coverage
+htmlcov/
+.pytest_cache/
