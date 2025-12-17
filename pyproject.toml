@@ -1,0 +1,29 @@
+[project]
+name = "daladala-live"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "issah-ubuntu",email = "nzikustephen826@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi (>=0.124.4,<0.125.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "python-jose (>=3.5.0,<4.0.0)",
+    "passlib[bcrypt] (>=1.7.4,<2.0.0)",
+    "email-validator (>=2.3.0,<3.0.0)",
+    "sqlalchemy (>=2.0.45,<3.0.0)",
+    "databases (>=0.9.0,<0.10.0)",
+    "pymysql (>=1.1.2,<2.0.0)",
+    "aiomysql (>=0.3.2,<0.4.0)",
+    "alembic (>=1.17.2,<2.0.0)",
+    "bcrypt (==4.0.1)"
+]
+
+[tool.poetry]
+packages = [{include = "daladala_live", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
