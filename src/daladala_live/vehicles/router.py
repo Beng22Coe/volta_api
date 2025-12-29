@@ -30,7 +30,7 @@ from .service import (
     remove_user_from_vehicle,
 )
 
-router = APIRouter(prefix="/vehicles", tags=["vehicles"])
+router = APIRouter(prefix="/api/vehicles", tags=["vehicles"])
 
 
 # ===== Vehicle Endpoints =====
