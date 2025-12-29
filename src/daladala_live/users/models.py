@@ -2,7 +2,7 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.sql import func
 from daladala_live.core.database import Base
-from daladala_live.utils import generate_public_id
+from daladala_live.utils import generate_base64_id
 
 
 class User(Base):
@@ -10,7 +10,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     public_id = Column(
-        String(11), unique=True, nullable=False, default=generate_public_id
+        String(11), unique=True, nullable=False, default=generate_base64_id
     )
     email = Column(String(255), unique=True, nullable=False)
     hashed_password = Column(String(255), nullable=False)

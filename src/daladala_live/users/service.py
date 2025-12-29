@@ -2,7 +2,7 @@ from sqlalchemy import select, update
 from daladala_live.core.database import database
 from .models import User
 from daladala_live.core.security import hash_password
-from daladala_live.utils import generate_public_id
+from daladala_live.utils import generate_base64_id
 
 
 # ===== Create Operations =====
@@ -10,7 +10,7 @@ from daladala_live.utils import generate_public_id
 
 async def create_user(email: str, password: str):
     """Create a new user and return the user data."""
-    public_id = generate_public_id()
+    public_id = generate_base64_id()
 
     query = User.__table__.insert().values(
         email=email,

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
 from sqlalchemy.sql import func
 from daladala_live.core.database import Base
-from daladala_live.utils import generate_public_id
+from daladala_live.utils import generate_base64_id
 
 
 class Token(Base):
