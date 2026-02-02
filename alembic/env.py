@@ -22,6 +22,7 @@ if config.config_file_name is not None:
 from daladala_live.core.database import Base  # or wherever your Base is defined
 from daladala_live.users.models import User  # noqa
 from daladala_live.vehicles.models import Vehicle, VehicleUser  # noqa
+from daladala_live.nodes.models import Node  # noqa
 
 target_metadata = Base.metadata
 

@@ -24,7 +24,7 @@ from daladala_live.users.service import (
 )
 
 
-router = APIRouter(prefix="/api/auth", tags=["auth"])
+router = APIRouter(prefix="/volta/api/auth", tags=["auth"])
 
 
 # ===== Request/Response Schemas =====

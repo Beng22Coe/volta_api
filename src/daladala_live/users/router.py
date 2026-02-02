@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from .schemas import UserCreate, UserOut
 from .service import create_user, get_user_by_email
 
-router = APIRouter(prefix="/api/register", tags=["users"])
+router = APIRouter(prefix="/volta/api/register", tags=["users"])
 
 
 @router.post("", response_model=UserOut)
