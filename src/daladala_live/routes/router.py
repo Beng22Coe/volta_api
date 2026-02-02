@@ -17,6 +17,7 @@ from .service import (
     create_route_node,
     delete_route,
     delete_route_node,
+    get_existing_node_ids,
     get_route_by_id,
     get_routes,
     get_routes_count,
@@ -99,6 +100,10 @@ async def add_route_node(route_id: int, payload: RouteNodeCreate):
     if not route:
         raise HTTPException(status_code=404, detail="Route not found")
 
+    existing_nodes = await get_existing_node_ids([payload.node_id])
+    if payload.node_id not in existing_nodes:
+        raise HTTPException(status_code=400, detail="Node does not exist")
+
     route_node = await create_route_node(route_id, payload.model_dump())
     return route_node
 
@@ -108,6 +113,14 @@ async def replace_route_nodes_endpoint(route_id: int, payload: list[RouteNodeCre
     route = await get_route_by_id(route_id)
     if not route:
         raise HTTPException(status_code=404, detail="Route not found")
+
+    node_ids = [item.node_id for item in payload]
+    existing_nodes = await get_existing_node_ids(node_ids)
+    missing = [node_id for node_id in node_ids if node_id not in existing_nodes]
+    if missing:
+        raise HTTPException(
+            status_code=400, detail={"message": "Nodes not found", "missing": missing}
+        )
 
     nodes = await replace_route_nodes(
         route_id, [item.model_dump() for item in payload]

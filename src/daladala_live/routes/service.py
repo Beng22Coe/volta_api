@@ -4,6 +4,7 @@ from sqlalchemy import delete, func, select, update
 
 from daladala_live.core.database import database
 from .models import Route, RouteNode
+from daladala_live.nodes.models import Node
 
 
 async def create_route(data: dict):
@@ -113,3 +114,12 @@ async def replace_route_nodes(route_id: int, nodes: list[dict]):
             await database.execute_many(RouteNode.__table__.insert(), nodes_payload)
 
     return await get_route_nodes(route_id)
+
+
+async def get_existing_node_ids(node_ids: list[int]) -> set[int]:
+    if not node_ids:
+        return set()
+
+    query = select(Node.id).where(Node.id.in_(node_ids))
+    rows = await database.fetch_all(query)
+    return {row["id"] for row in rows}
