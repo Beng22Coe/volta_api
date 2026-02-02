@@ -25,6 +25,7 @@ from daladala_live.users.service import (
 
 
 router = APIRouter(prefix="/volta/api/auth", tags=["auth"])
+legacy_router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 
 # ===== Request/Response Schemas =====
@@ -242,6 +243,7 @@ async def forgot_password(payload: ForgotPasswordRequest):
 
 
 @router.post("/reset-password", response_model=MessageResponse)
+@legacy_router.post("/reset-password", response_model=MessageResponse)
 async def reset_password(payload: ResetPasswordRequest):
     """
     Reset password using a valid reset token.
