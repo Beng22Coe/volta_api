@@ -22,7 +22,7 @@ class PaginationMeta(BaseModel):
     total_pages: int
 
 
-def x() -> int:
+def _unix_ms_timestamp() -> int:
     return int(datetime.now(timezone.utc).timestamp() * 1000)
 
 
