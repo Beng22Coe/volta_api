@@ -57,9 +57,37 @@ async def http_exception_handler(request, exc):  # noqa: ARG001
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc):  # noqa: ARG001
+    errors = []
+    missing_fields = []
+    for err in exc.errors():
+        loc = [str(part) for part in err.get("loc", []) if part != "body"]
+        field = ".".join(loc) if loc else "body"
+        message = err.get("msg", "Invalid value")
+        error_type = err.get("type")
+        errors.append(
+            {
+                "field": field,
+                "message": message,
+                "type": error_type,
+            }
+        )
+        if error_type == "missing":
+            missing_fields.append(field)
+
+    if missing_fields:
+        message = f"Missing required fields: {', '.join(missing_fields)}"
+    else:
+        message = "Validation error"
+
     return JSONResponse(
         status_code=422,
-        content=error_response("Validation error"),
+        content=error_response(
+            message,
+            data={
+                "errors": errors,
+                "missing_fields": missing_fields,
+            },
+        ),
     )
 
 

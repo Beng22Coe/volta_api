@@ -100,6 +100,7 @@ async def register_user(payload: UserCreate):
     user = await create_user(
         payload.email,
         payload.password,
+        payload.full_name,
         role=payload.role.value,
     )
 

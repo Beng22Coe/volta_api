@@ -10,13 +10,19 @@ from volta_api.utils import generate_base64_id
 # ===== Create Operations =====
 
 
-async def create_user(email: str, password: str, role: str = "driver"):
+async def create_user(
+    email: str,
+    password: str,
+    full_name: str,
+    role: str = "driver",
+):
     """Create a new user and return the user data."""
     public_id = generate_base64_id()
 
     query = User.__table__.insert().values(
         email=email,
         hashed_password=hash_password(password),
+        full_name=full_name,
         role=role,
         is_active=True,
         is_email_verified=False,

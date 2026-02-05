@@ -48,9 +48,12 @@ def success_response(*, message: str | None = None, data: Any = None, meta: Any 
     return jsonable_encoder(payload)
 
 
-def error_response(message: str):
-    return jsonable_encoder({
+def error_response(message: str, data: Any = None):
+    payload: dict[str, Any] = {
         "success": False,
         "timestamp": _unix_ms_timestamp(),
         "message": message,
-    })
+    }
+    if data is not None:
+        payload["data"] = _normalize_data(data)
+    return jsonable_encoder(payload)

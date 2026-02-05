@@ -12,6 +12,7 @@ class User(Base):
     public_id = Column(
         String(11), unique=True, nullable=False, default=generate_base64_id
     )
+    full_name = Column(String(120), nullable=True)
     email = Column(String(255), unique=True, nullable=False)
     hashed_password = Column(String(255), nullable=False)
     role = Column(String(20), nullable=False, default="driver")
