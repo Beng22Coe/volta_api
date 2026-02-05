@@ -39,7 +39,6 @@ class UserOut(BaseModel):
     is_active: bool
     is_email_verified: Optional[bool] = False
     created_at: Optional[datetime] = None
-    updated_at: Optional[datetime] = None
 
     class Config:
         from_attributes = True

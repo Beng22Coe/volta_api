@@ -9,6 +9,7 @@ from .schemas import (
     UserDeleteConfirm,
     UserUpdate,
     UserRole,
+    UserOut,
 )
 from .service import (
     create_user,
@@ -68,7 +69,8 @@ async def list_users(
         page_size=page_size,
         total_pages=total_pages,
     )
-    return success_response(data=users, meta=meta)
+    users_out = [UserOut.model_validate(user).model_dump() for user in users]
+    return success_response(data=users_out, meta=meta)
 
 
 @users_router.post("", response_model=ApiResponse, response_model_exclude_none=True, status_code=201)
@@ -82,7 +84,8 @@ async def create_user_admin(payload: UserCreate):
         payload.full_name,
         role=payload.role.value,
     )
-    return success_response(message="User created", data=user)
+    user_out = UserOut.model_validate(user).model_dump()
+    return success_response(message="User created", data=user_out)
 
 
 @users_router.get("/{public_id}", response_model=ApiResponse, response_model_exclude_none=True)
@@ -90,7 +93,8 @@ async def read_user(public_id: str):
     user = await get_user_by_public_id(public_id)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
-    return success_response(data=user)
+    user_out = UserOut.model_validate(user).model_dump()
+    return success_response(data=user_out)
 
 
 @users_router.put("/{public_id}", response_model=ApiResponse, response_model_exclude_none=True)
@@ -109,7 +113,8 @@ async def edit_user(public_id: str, payload: UserUpdate):
         update_data["role"] = update_data["role"].value
 
     updated = await update_user(public_id, update_data)
-    return success_response(message="User updated", data=updated)
+    user_out = UserOut.model_validate(updated).model_dump()
+    return success_response(message="User updated", data=user_out)
 
 
 @users_router.delete("/{public_id}", response_model=ApiResponse, response_model_exclude_none=True)
