@@ -50,6 +50,7 @@ async def list_users(
     page_size: int = Query(20, ge=1, le=100, description="Items per page"),
     role: UserRole | None = Query(None, description="Filter by role"),
     is_active: bool | None = Query(None, description="Filter by active status"),
+    current_user=Depends(get_current_admin_user),
 ):
     skip = (page - 1) * page_size
     role_value = role.value if role else None
@@ -59,8 +60,13 @@ async def list_users(
         limit=page_size,
         role=role_value,
         is_active=is_active,
+        exclude_public_id=current_user.public_id,
     )
-    total = await get_users_count(role=role_value, is_active=is_active)
+    total = await get_users_count(
+        role=role_value,
+        is_active=is_active,
+        exclude_public_id=current_user.public_id,
+    )
     total_pages = math.ceil(total / page_size) if total > 0 else 1
 
     meta = PaginationMeta(

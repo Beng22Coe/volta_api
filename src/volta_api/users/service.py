@@ -59,6 +59,7 @@ async def get_users(
     limit: int = 100,
     role: str | None = None,
     is_active: bool | None = None,
+    exclude_public_id: str | None = None,
 ):
     query = User.__table__.select()
 
@@ -66,18 +67,26 @@ async def get_users(
         query = query.where(User.role == role)
     if is_active is not None:
         query = query.where(User.is_active == is_active)
+    if exclude_public_id is not None:
+        query = query.where(User.public_id != exclude_public_id)
 
     query = query.offset(skip).limit(limit)
     return await database.fetch_all(query)
 
 
-async def get_users_count(role: str | None = None, is_active: bool | None = None) -> int:
+async def get_users_count(
+    role: str | None = None,
+    is_active: bool | None = None,
+    exclude_public_id: str | None = None,
+) -> int:
     query = select(func.count()).select_from(User.__table__)
 
     if role is not None:
         query = query.where(User.role == role)
     if is_active is not None:
         query = query.where(User.is_active == is_active)
+    if exclude_public_id is not None:
+        query = query.where(User.public_id != exclude_public_id)
 
     result = await database.fetch_one(query)
     return result[0] if result else 0
