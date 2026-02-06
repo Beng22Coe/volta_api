@@ -35,7 +35,6 @@ from .service import (
 router = APIRouter(
     prefix="/volta/api/routes",
     tags=["routes"],
-    dependencies=[Depends(get_current_active_user)],
 )
 
 
@@ -44,10 +43,11 @@ async def list_routes(
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(20, ge=1, le=100, description="Items per page"),
     is_active: bool | None = Query(None, description="Filter by active status"),
+    q: str | None = Query(None, min_length=1, description="Search by code or name"),
 ):
     skip = (page - 1) * page_size
-    routes = await get_routes(skip=skip, limit=page_size, is_active=is_active)
-    total = await get_routes_count(is_active=is_active)
+    routes = await get_routes(skip=skip, limit=page_size, is_active=is_active, q=q)
+    total = await get_routes_count(is_active=is_active, q=q)
     total_pages = math.ceil(total / page_size) if total > 0 else 1
 
     meta = PaginationMeta(
@@ -75,7 +75,12 @@ async def register_route(
     return success_response(message="Route created", data=route)
 
 
-@router.put("/{route_id}", response_model=ApiResponse, response_model_exclude_none=True)
+@router.put(
+    "/{route_id}",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def edit_route(route_id: int, payload: RouteUpdate):
     route = await get_route_by_id(route_id)
     if not route:
@@ -86,7 +91,12 @@ async def edit_route(route_id: int, payload: RouteUpdate):
     return success_response(message="Route updated", data=updated)
 
 
-@router.get("/{route_id}", response_model=ApiResponse, response_model_exclude_none=True)
+@router.get(
+    "/{route_id}",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def read_route(route_id: int):
     route = await get_route_by_id(route_id)
     if not route:
@@ -94,7 +104,12 @@ async def read_route(route_id: int):
     return success_response(data=route)
 
 
-@router.delete("/{route_id}", response_model=ApiResponse, response_model_exclude_none=True)
+@router.delete(
+    "/{route_id}",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def remove_route(route_id: int):
     route = await get_route_by_id(route_id)
     if not route:
@@ -103,7 +118,12 @@ async def remove_route(route_id: int):
     return success_response(message="Route deleted")
 
 
-@router.get("/{route_id}/nodes", response_model=ApiResponse, response_model_exclude_none=True)
+@router.get(
+    "/{route_id}/nodes",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def list_route_nodes(route_id: int):
     route = await get_route_by_id(route_id)
     if not route:
@@ -125,6 +145,7 @@ async def list_route_nodes(route_id: int):
     response_model=ApiResponse,
     response_model_exclude_none=True,
     status_code=201,
+    dependencies=[Depends(get_current_active_user)],
 )
 async def add_route_node(route_id: int, payload: RouteNodeCreate):
     route = await get_route_by_id(route_id)
@@ -139,7 +160,12 @@ async def add_route_node(route_id: int, payload: RouteNodeCreate):
     return success_response(message="Route node created", data=route_node)
 
 
-@router.put("/{route_id}/nodes", response_model=ApiResponse, response_model_exclude_none=True)
+@router.put(
+    "/{route_id}/nodes",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def replace_route_nodes_endpoint(route_id: int, payload: list[RouteNodeCreate]):
     route = await get_route_by_id(route_id)
     if not route:
@@ -169,6 +195,7 @@ async def replace_route_nodes_endpoint(route_id: int, payload: list[RouteNodeCre
     "/{route_id}/nodes/{route_node_id}",
     response_model=ApiResponse,
     response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
 )
 async def edit_route_node(
     route_id: int, route_node_id: int, payload: RouteNodeUpdate
@@ -191,6 +218,7 @@ async def edit_route_node(
     "/{route_id}/nodes/{route_node_id}",
     response_model=ApiResponse,
     response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
 )
 async def remove_route_node(route_id: int, route_node_id: int):
     route = await get_route_by_id(route_id)
@@ -205,7 +233,12 @@ async def remove_route_node(route_id: int, route_node_id: int):
     return success_response(message="Route node deleted")
 
 
-@router.delete("/{route_id}/nodes", response_model=ApiResponse, response_model_exclude_none=True)
+@router.delete(
+    "/{route_id}/nodes",
+    response_model=ApiResponse,
+    response_model_exclude_none=True,
+    dependencies=[Depends(get_current_active_user)],
+)
 async def remove_route_nodes(route_id: int, payload: RouteNodesDelete):
     route = await get_route_by_id(route_id)
     if not route:

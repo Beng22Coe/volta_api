@@ -1,6 +1,6 @@
 from typing import Optional
 
-from sqlalchemy import delete, func, select, update
+from sqlalchemy import delete, func, or_, select, update
 
 from volta_api.core.database import database
 from .models import Route, RouteNode
@@ -23,7 +23,6 @@ async def get_route_by_id(route_id: int):
             Route.name,
             Route.geometry,
             Route.is_active,
-            Route.created_at,
         )
         .where(Route.id == route_id)
     )
@@ -34,6 +33,7 @@ async def get_routes(
     skip: int = 0,
     limit: int = 100,
     is_active: Optional[bool] = None,
+    q: Optional[str] = None,
 ):
     query = (
         Route.__table__
@@ -44,22 +44,30 @@ async def get_routes(
             Route.name,
             Route.geometry,
             Route.is_active,
-            Route.created_at,
         )
     )
 
     if is_active is not None:
         query = query.where(Route.is_active == is_active)
+    if q:
+        pattern = f"%{q.strip()}%"
+        query = query.where(or_(Route.code.ilike(pattern), Route.name.ilike(pattern)))
 
     query = query.offset(skip).limit(limit)
     return await database.fetch_all(query)
 
 
-async def get_routes_count(is_active: Optional[bool] = None) -> int:
+async def get_routes_count(
+    is_active: Optional[bool] = None,
+    q: Optional[str] = None,
+) -> int:
     query = select(func.count()).select_from(Route.__table__)
 
     if is_active is not None:
         query = query.where(Route.is_active == is_active)
+    if q:
+        pattern = f"%{q.strip()}%"
+        query = query.where(or_(Route.code.ilike(pattern), Route.name.ilike(pattern)))
 
     result = await database.fetch_one(query)
     return result[0] if result else 0
