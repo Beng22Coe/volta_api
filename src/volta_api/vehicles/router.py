@@ -28,7 +28,6 @@ from .service import (
     get_vehicle_by_id,
     update_vehicle,
     delete_vehicle,
-    update_vehicle_location_sharing,
     assign_user_to_vehicle,
     get_vehicle_user,
     get_users_by_vehicle,
@@ -47,7 +46,6 @@ def _strip_vehicle_fields(vehicle: dict) -> dict:
     vehicle_payload = dict(vehicle)
     vehicle_payload.pop("id", None)
     vehicle_payload.pop("updated_at", None)
-    vehicle_payload.pop("is_sharing_location", None)
     return vehicle_payload
 
     
@@ -90,9 +88,6 @@ async def list_vehicles(
     page_size: int = Query(20, ge=1, le=100, description="Items per page"),
     status: Optional[VehicleStatus] = Query(None, description="Filter by status"),
     vehicle_type: Optional[str] = Query(None, description="Filter by vehicle type"),
-    is_sharing_location: Optional[bool] = Query(
-        None, description="Filter by location sharing status"
-    ),
     current_user=Depends(get_current_active_user),
 ):
     """List all vehicles with pagination and filtering."""
@@ -105,14 +100,12 @@ async def list_vehicles(
         limit=page_size,
         status=status_value,
         vehicle_type=vehicle_type,
-        is_sharing_location=is_sharing_location,
     )
 
     total = await get_vehicles_count_for_user(
         user_id=current_user.public_id,
         status=status_value,
         vehicle_type=vehicle_type,
-        is_sharing_location=is_sharing_location,
     )
 
     total_pages = math.ceil(total / page_size) if total > 0 else 1
@@ -138,9 +131,6 @@ async def list_vehicles_with_owners(
     page_size: int = Query(20, ge=1, le=100, description="Items per page"),
     status: Optional[VehicleStatus] = Query(None, description="Filter by status"),
     vehicle_type: Optional[str] = Query(None, description="Filter by vehicle type"),
-    is_sharing_location: Optional[bool] = Query(
-        None, description="Filter by location sharing status"
-    ),
     current_user=Depends(get_current_admin_user),
 ):
     """List all vehicles with owners (admin only)."""
@@ -152,13 +142,11 @@ async def list_vehicles_with_owners(
         limit=page_size,
         status=status_value,
         vehicle_type=vehicle_type,
-        is_sharing_location=is_sharing_location,
     )
 
     total = await get_vehicles_count(
         status=status_value,
         vehicle_type=vehicle_type,
-        is_sharing_location=is_sharing_location,
     )
 
     total_pages = math.ceil(total / page_size) if total > 0 else 1
@@ -258,21 +246,6 @@ async def edit_vehicle(vehicle_id: int, payload: VehicleUpdate):
             raise HTTPException(status_code=404, detail="Route not found")
 
     updated = await update_vehicle(vehicle_id, update_data)
-    return success_response(message="Vehicle updated", data=updated)
-
-
-@router.patch(
-    "/{vehicle_id}/location-sharing",
-    response_model=ApiResponse,
-    response_model_exclude_none=True,
-)
-async def toggle_location_sharing(vehicle_id: int, is_sharing: bool):
-    """Toggle location sharing for a vehicle."""
-    vehicle = await get_vehicle_by_id(vehicle_id)
-    if not vehicle:
-        raise HTTPException(status_code=404, detail="Vehicle not found")
-
-    updated = await update_vehicle_location_sharing(vehicle_id, is_sharing)
     return success_response(message="Vehicle updated", data=updated)
 
 

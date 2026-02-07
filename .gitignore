@@ -10,7 +10,7 @@ venv/
 
 # Poetry
 poetry.lock
-
+test.json
 # Alembic
 alembic/versions/__pycache__/
 

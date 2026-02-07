@@ -20,7 +20,6 @@ async def get_vehicles(
     limit: int = 100,
     status: Optional[str] = None,
     vehicle_type: Optional[str] = None,
-    is_sharing_location: Optional[bool] = None,
 ):
     """Get all vehicles with optional filtering and pagination."""
     query = Vehicle.__table__.select()
@@ -31,9 +30,6 @@ async def get_vehicles(
         filters.append(Vehicle.status == status)
     if vehicle_type:
         filters.append(Vehicle.type == vehicle_type)
-    if is_sharing_location is not None:
-        filters.append(Vehicle.is_sharing_location == is_sharing_location)
-
     if filters:
         query = query.where(and_(*filters))
 
@@ -47,7 +43,6 @@ async def get_vehicles_for_user(
     limit: int = 100,
     status: Optional[str] = None,
     vehicle_type: Optional[str] = None,
-    is_sharing_location: Optional[bool] = None,
 ):
     """Get vehicles associated with a specific user."""
     vehicles_table = Vehicle.__table__
@@ -68,9 +63,6 @@ async def get_vehicles_for_user(
         filters.append(vehicles_table.c.status == status)
     if vehicle_type:
         filters.append(vehicles_table.c.type == vehicle_type)
-    if is_sharing_location is not None:
-        filters.append(vehicles_table.c.is_sharing_location == is_sharing_location)
-
     if filters:
         query = query.where(and_(*filters))
 
@@ -81,7 +73,6 @@ async def get_vehicles_for_user(
 async def get_vehicles_count(
     status: Optional[str] = None,
     vehicle_type: Optional[str] = None,
-    is_sharing_location: Optional[bool] = None,
 ) -> int:
     """Get total count of vehicles with optional filtering."""
     query = select(func.count()).select_from(Vehicle.__table__)
@@ -91,9 +82,6 @@ async def get_vehicles_count(
         filters.append(Vehicle.status == status)
     if vehicle_type:
         filters.append(Vehicle.type == vehicle_type)
-    if is_sharing_location is not None:
-        filters.append(Vehicle.is_sharing_location == is_sharing_location)
-
     if filters:
         query = query.where(and_(*filters))
 
@@ -105,7 +93,6 @@ async def get_vehicles_count_for_user(
     user_id: str,
     status: Optional[str] = None,
     vehicle_type: Optional[str] = None,
-    is_sharing_location: Optional[bool] = None,
 ) -> int:
     """Get total count of vehicles associated with a specific user."""
     vehicles_table = Vehicle.__table__
@@ -126,9 +113,6 @@ async def get_vehicles_count_for_user(
         filters.append(vehicles_table.c.status == status)
     if vehicle_type:
         filters.append(vehicles_table.c.type == vehicle_type)
-    if is_sharing_location is not None:
-        filters.append(vehicles_table.c.is_sharing_location == is_sharing_location)
-
     if filters:
         query = query.where(and_(*filters))
 
@@ -244,7 +228,6 @@ async def get_vehicles_with_owners(
     limit: int = 100,
     status: Optional[str] = None,
     vehicle_type: Optional[str] = None,
-    is_sharing_location: Optional[bool] = None,
 ):
     """Get vehicles with their owner user info (admin view)."""
     vehicles_table = Vehicle.__table__
@@ -258,9 +241,6 @@ async def get_vehicles_with_owners(
         filters.append(vehicles_table.c.status == status)
     if vehicle_type:
         filters.append(vehicles_table.c.type == vehicle_type)
-    if is_sharing_location is not None:
-        filters.append(vehicles_table.c.is_sharing_location == is_sharing_location)
-
     if filters:
         vehicles_query = vehicles_query.where(and_(*filters))
 
@@ -334,15 +314,6 @@ async def delete_vehicle(vehicle_id: int):
     return {"deleted": vehicle_id}
 
 
-async def update_vehicle_location_sharing(vehicle_id: int, is_sharing: bool):
-    """Toggle vehicle location sharing status."""
-    query = (
-        update(Vehicle.__table__)
-        .where(Vehicle.id == vehicle_id)
-        .values(is_sharing_location=is_sharing)
-    )
-    await database.execute(query)
-    return await get_vehicle_by_id(vehicle_id)
 
 
 # ===== VehicleUser CRUD Operations =====

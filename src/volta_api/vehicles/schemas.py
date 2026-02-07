@@ -25,7 +25,6 @@ class VehicleCreate(BaseModel):
     type: str = Field(..., min_length=1, max_length=50)
     status: VehicleStatus = VehicleStatus.ACTIVE
     route_id: Optional[int] = None
-    is_sharing_location: bool = False
 
 
 class VehicleUpdate(BaseModel):
@@ -34,7 +33,6 @@ class VehicleUpdate(BaseModel):
     type: str = Field(..., min_length=1, max_length=50)
     status: Optional[VehicleStatus] = None
     route_id: Optional[int] = None
-    is_sharing_location: Optional[bool] = None
 
 
 class VehicleOut(BaseModel):
