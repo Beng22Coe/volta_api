@@ -8,7 +8,7 @@ SHARING_KEY = "vehicle:{vehicle_id}:sharing"
 
 HISTORY_TTL_SECONDS = 60 * 60  # 1 hour
 HISTORY_MAX = 2000
-SHARING_TTL_SECONDS = 30
+SHARING_TTL_SECONDS = 60 * 2 # Sharing expires after 2 minutes of inactivity, but can be refreshed with each new location update
 
 SUPPORTED_TYPES = [
     "auth",

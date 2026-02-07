@@ -2,12 +2,15 @@
 
 A FastAPI application for managing daladala (public transport) live tracking data.
 
-## Commands
+## Setup
 
 ```bash
 poetry install
-poetry run alembic init alembic
-poetry run alembic revision --autogenerate -m "Add vehicles and vehicles_users tables"
+```
+
+## Run database migrations
+
+```bash
 poetry run alembic upgrade head
 ```
 

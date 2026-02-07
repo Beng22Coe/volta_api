@@ -366,10 +366,6 @@ async def vehicle_ws(ws: WebSocket):
                         "received_at": time.strftime(
                             "%Y-%m-%dT%H:%M:%SZ", time.gmtime()
                         ),
-                        "sender": {
-                            "id": ctx.user_id,
-                            "role": ctx.role,
-                        },
                     },
                 }
 
