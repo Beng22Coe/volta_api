@@ -15,8 +15,6 @@ SUPPORTED_TYPES = [
     "ping",
     "route.subscribe",
     "route.unsubscribe",
-    "vehicle.subscribe",
-    "vehicle.unsubscribe",
     "vehicle.location.share",
     "vehicle.location.broadcast",
 ]

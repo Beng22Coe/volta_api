@@ -8,18 +8,17 @@ from typing import Any, Dict
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from volta_api.core.redis import redis_client
 
-from volta_api.ws.auth import can_publish, can_subscribe, verify_token
+from volta_api.ws.auth import can_publish, verify_token
 from volta_api.ws.constants import SUPPORTED_TYPES
 from volta_api.ws.manager import manager
 from volta_api.ws.protocol import err, ok
 from volta_api.ws.store import (
-    get_latest,
     is_sharing_active,
     refresh_sharing,
     save_latest_and_history,
     set_sharing,
 )
-from volta_api.ws.topics import topic_for_route, topic_for_vehicle
+from volta_api.ws.topics import topic_for_route
 from volta_api.vehicles.service import get_vehicle_by_id
 from volta_api.routes.service import get_route_by_id
 
@@ -31,7 +30,7 @@ async def vehicle_ws(ws: WebSocket):
     """
     One WS endpoint:
     - client authenticates (auth)
-    - commuters subscribe to vehicles (vehicle.subscribe) or routes (route.subscribe)
+    - commuters subscribe to routes (route.subscribe)
     - drivers/devices broadcast location (vehicle.location.broadcast)
     - server broadcasts updates to subscribers (vehicle.location.update)
     """
@@ -91,90 +90,6 @@ async def vehicle_ws(ws: WebSocket):
             # ---- PING ----
             if msg_type == "ping":
                 await ws.send_json(ok("pong", request_id, {"ts": int(time.time())}))
-                continue
-
-            # ---- SUBSCRIBE ----
-            if msg_type == "vehicle.subscribe":
-                vehicle_id = payload.get("vehicle_id")
-                session_id = payload.get("session_id")
-                share_token = payload.get("share_token")
-
-                if vehicle_id is None:
-                    await ws.send_json(
-                        err("BAD_REQUEST", "vehicle_id is required", request_id)
-                    )
-                    continue
-
-                try:
-                    vehicle_id = int(vehicle_id)
-                except (TypeError, ValueError):
-                    await ws.send_json(
-                        err("BAD_REQUEST", "vehicle_id must be an integer", request_id)
-                    )
-                    continue
-
-                ctx = manager.get_auth(ws)
-                allowed = await can_subscribe(
-                    ctx, vehicle_id, session_id=session_id, share_token=share_token
-                )
-                if not allowed:
-                    await ws.send_json(
-                        err(
-                            "FORBIDDEN",
-                            "Not allowed to subscribe to this vehicle",
-                            request_id,
-                        )
-                    )
-                    continue
-
-                topic = topic_for_vehicle(vehicle_id)
-                await manager.subscribe(ws, topic)
-
-                latest = await get_latest(vehicle_id)
-                if latest:
-                    await ws.send_json(
-                        ok(
-                            "vehicle.location.snapshot",
-                            request_id,
-                            latest.get("data", latest),
-                        )
-                    )
-                else:
-                    await ws.send_json(
-                        ok(
-                            "vehicle.location.snapshot",
-                            request_id,
-                            {"vehicle_id": vehicle_id, "empty": True},
-                        )
-                    )
-
-                await ws.send_json(
-                    ok("vehicle.subscribe.ok", request_id, {"vehicle_id": vehicle_id})
-                )
-                continue
-
-            # ---- UNSUBSCRIBE ----
-            if msg_type == "vehicle.unsubscribe":
-                vehicle_id = payload.get("vehicle_id")
-                if vehicle_id is None:
-                    await ws.send_json(
-                        err("BAD_REQUEST", "vehicle_id is required", request_id)
-                    )
-                    continue
-
-                try:
-                    vehicle_id = int(vehicle_id)
-                except (TypeError, ValueError):
-                    await ws.send_json(
-                        err("BAD_REQUEST", "vehicle_id must be an integer", request_id)
-                    )
-                    continue
-
-                topic = topic_for_vehicle(vehicle_id)
-                await manager.unsubscribe(ws, topic)
-                await ws.send_json(
-                    ok("vehicle.unsubscribe.ok", request_id, {"vehicle_id": vehicle_id})
-                )
                 continue
 
             # ---- SUBSCRIBE ROUTE ----
