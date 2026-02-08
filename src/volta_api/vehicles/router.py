@@ -44,7 +44,6 @@ router = APIRouter(
 
 def _strip_vehicle_fields(vehicle: dict) -> dict:
     vehicle_payload = dict(vehicle)
-    vehicle_payload.pop("id", None)
     vehicle_payload.pop("updated_at", None)
     return vehicle_payload
 
