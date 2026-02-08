@@ -16,7 +16,7 @@ alembic/versions/__pycache__/
 
 # Logs
 *.log
-
+logs
 
 # OS
 .DS_Store
