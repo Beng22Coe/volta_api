@@ -16,7 +16,7 @@ alembic/versions/__pycache__/
 
 # Logs
 *.log
-
+volta.sql
 
 # OS
 .DS_Store
