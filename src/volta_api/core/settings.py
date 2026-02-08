@@ -1,4 +1,7 @@
 from pydantic_settings import BaseSettings
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[3]  # -> ~/volta_api
 
 
 class Settings(BaseSettings):
@@ -16,6 +19,7 @@ class Settings(BaseSettings):
     MAIL_PORT: int = 587
 
     class Config:
-        env_file = ".env"
+        env_file = str(BASE_DIR / ".env")
+
 
 settings = Settings()
