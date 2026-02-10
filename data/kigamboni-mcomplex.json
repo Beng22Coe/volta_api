@@ -1,0 +1,387 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.10 2d4cfc48",
+    "osm3s": {
+        "timestamp_osm_base": "2026-02-09T17:26:21Z",
+        "timestamp_areas_base": "2026-01-22T23:45:51Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+        {
+            "type": "way",
+            "id": 268569898,
+            "bounds": {
+                "minlat": -6.8595682,
+                "minlon": 39.3083142,
+                "maxlat": -6.8527667,
+                "maxlon": 39.3111777
+            },
+            "geometry": [
+                {
+                    "lat": -6.8527667,
+                    "lon": 39.3111777
+                },
+                {
+                    "lat": -6.8530810,
+                    "lon": 39.3110824
+                },
+                {
+                    "lat": -6.8564204,
+                    "lon": 39.3102586
+                },
+                {
+                    "lat": -6.8577059,
+                    "lon": 39.3099415
+                },
+                {
+                    "lat": -6.8580255,
+                    "lon": 39.3098340
+                },
+                {
+                    "lat": -6.8582437,
+                    "lon": 39.3097595
+                },
+                {
+                    "lat": -6.8585901,
+                    "lon": 39.3095702
+                },
+                {
+                    "lat": -6.8589043,
+                    "lon": 39.3093325
+                },
+                {
+                    "lat": -6.8592276,
+                    "lon": 39.3089888
+                },
+                {
+                    "lat": -6.8593883,
+                    "lon": 39.3087485
+                },
+                {
+                    "lat": -6.8595104,
+                    "lon": 39.3084927
+                },
+                {
+                    "lat": -6.8595682,
+                    "lon": 39.3083142
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "highway": "primary",
+                "lanes": "3",
+                "lit": "yes",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "asphalt"
+            }
+        },
+        {
+            "type": "way",
+            "id": 399908678,
+            "bounds": {
+                "minlat": -6.8594862,
+                "minlon": 39.2964943,
+                "maxlat": -6.8590721,
+                "maxlon": 39.3026529
+            },
+            "geometry": [
+                {
+                    "lat": -6.8594862,
+                    "lon": 39.3026529
+                },
+                {
+                    "lat": -6.8590721,
+                    "lon": 39.2964943
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "bicycle": "yes",
+                "bridge": "yes",
+                "foot": "yes",
+                "highway": "primary",
+                "lanes": "3",
+                "layer": "1",
+                "lit": "yes",
+                "maxweight:signed": "no",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "excellent",
+                "surface": "asphalt",
+                "toll": "yes"
+            }
+        },
+        {
+            "type": "way",
+            "id": 413277428,
+            "bounds": {
+                "minlat": -6.8592973,
+                "minlon": 39.3080766,
+                "maxlat": -6.8526716,
+                "maxlon": 39.3109481
+            },
+            "geometry": [
+                {
+                    "lat": -6.8592973,
+                    "lon": 39.3080766
+                },
+                {
+                    "lat": -6.8592243,
+                    "lon": 39.3083293
+                },
+                {
+                    "lat": -6.8591206,
+                    "lon": 39.3085676
+                },
+                {
+                    "lat": -6.8589844,
+                    "lon": 39.3088216
+                },
+                {
+                    "lat": -6.8588195,
+                    "lon": 39.3090449
+                },
+                {
+                    "lat": -6.8585570,
+                    "lon": 39.3093034
+                },
+                {
+                    "lat": -6.8583800,
+                    "lon": 39.3094654
+                },
+                {
+                    "lat": -6.8581576,
+                    "lon": 39.3096032
+                },
+                {
+                    "lat": -6.8579043,
+                    "lon": 39.3097216
+                },
+                {
+                    "lat": -6.8576550,
+                    "lon": 39.3098157
+                },
+                {
+                    "lat": -6.8534869,
+                    "lon": 39.3108569
+                },
+                {
+                    "lat": -6.8533191,
+                    "lon": 39.3108851
+                },
+                {
+                    "lat": -6.8526716,
+                    "lon": 39.3109481
+                }
+            ],
+            "tags": {
+                "highway": "primary",
+                "lanes": "3",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "asphalt"
+            }
+        },
+        {
+            "type": "way",
+            "id": 445835311,
+            "bounds": {
+                "minlat": -6.8593471,
+                "minlon": 39.2964967,
+                "maxlat": -6.8589349,
+                "maxlon": 39.3026677
+            },
+            "geometry": [
+                {
+                    "lat": -6.8589349,
+                    "lon": 39.2964967
+                },
+                {
+                    "lat": -6.8593471,
+                    "lon": 39.3026677
+                }
+            ],
+            "tags": {
+                "bridge": "yes",
+                "highway": "primary",
+                "lanes": "3",
+                "layer": "1",
+                "maxspeed": "60",
+                "maxweight:signed": "no",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "excellent",
+                "surface": "asphalt"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1308619704,
+            "bounds": {
+                "minlat": -6.8596864,
+                "minlon": 39.3047685,
+                "maxlat": -6.8595512,
+                "maxlon": 39.3083142
+            },
+            "geometry": [
+                {
+                    "lat": -6.8595682,
+                    "lon": 39.3083142
+                },
+                {
+                    "lat": -6.8596339,
+                    "lon": 39.3081115
+                },
+                {
+                    "lat": -6.8596700,
+                    "lon": 39.3079132
+                },
+                {
+                    "lat": -6.8596864,
+                    "lon": 39.3076497
+                },
+                {
+                    "lat": -6.8596760,
+                    "lon": 39.3073257
+                },
+                {
+                    "lat": -6.8596285,
+                    "lon": 39.3065425
+                },
+                {
+                    "lat": -6.8595630,
+                    "lon": 39.3051518
+                },
+                {
+                    "lat": -6.8595512,
+                    "lon": 39.3047685
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "highway": "primary",
+                "lanes": "3",
+                "lit": "yes",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "concrete"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1308619706,
+            "bounds": {
+                "minlat": -6.8593638,
+                "minlon": 39.3047506,
+                "maxlat": -6.8592607,
+                "maxlon": 39.3080766
+            },
+            "geometry": [
+                {
+                    "lat": -6.8592924,
+                    "lon": 39.3047506
+                },
+                {
+                    "lat": -6.8592607,
+                    "lon": 39.3052827
+                },
+                {
+                    "lat": -6.8593117,
+                    "lon": 39.3065708
+                },
+                {
+                    "lat": -6.8593638,
+                    "lon": 39.3074316
+                },
+                {
+                    "lat": -6.8593399,
+                    "lon": 39.3078386
+                },
+                {
+                    "lat": -6.8592973,
+                    "lon": 39.3080766
+                }
+            ],
+            "tags": {
+                "highway": "primary",
+                "lanes": "3",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "concrete"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1308619717,
+            "bounds": {
+                "minlat": -6.8595512,
+                "minlon": 39.3026529,
+                "maxlat": -6.8594862,
+                "maxlon": 39.3047685
+            },
+            "geometry": [
+                {
+                    "lat": -6.8595512,
+                    "lon": 39.3047685
+                },
+                {
+                    "lat": -6.8594862,
+                    "lon": 39.3026529
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "highway": "primary",
+                "lanes": "3",
+                "lit": "yes",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "asphalt"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1308619719,
+            "bounds": {
+                "minlat": -6.8593553,
+                "minlon": 39.3026677,
+                "maxlat": -6.8592924,
+                "maxlon": 39.3047506
+            },
+            "geometry": [
+                {
+                    "lat": -6.8593471,
+                    "lon": 39.3026677
+                },
+                {
+                    "lat": -6.8593553,
+                    "lon": 39.3036952
+                },
+                {
+                    "lat": -6.8592924,
+                    "lon": 39.3047506
+                }
+            ],
+            "tags": {
+                "highway": "primary",
+                "lanes": "3",
+                "maxspeed": "60",
+                "name": "Nyerere Bridge",
+                "oneway": "yes",
+                "smoothness": "good",
+                "surface": "asphalt"
+            }
+        }
+    ]
+}

@@ -5,9 +5,11 @@ import re
 
 from pydantic import BaseModel, Field, field_validator
 
-_LINESTRING_RE = re.compile(
-    r"^LINESTRING\(\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?"
-    r"(\s*,\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?)*\s*\)$",
+_MULTILINESTRING_RE = re.compile(
+    r"^MULTILINESTRING\(\s*\(\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?"
+    r"(\s*,\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?)*\s*\)"
+    r"(\s*,\s*\(\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?"
+    r"(\s*,\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?)*\s*\))*\s*\)$",
     re.IGNORECASE,
 )
 
@@ -49,8 +51,8 @@ class RouteCreate(BaseModel):
     def validate_geometry(cls, value: Optional[str]) -> Optional[str]:
         if value is None:
             return value
-        if not _LINESTRING_RE.match(value.strip()):
-            raise ValueError("geometry must be a WKT LINESTRING")
+        if not _MULTILINESTRING_RE.match(value.strip()):
+            raise ValueError("geometry must be a WKT MULTILINESTRING")
         return value.strip()
 
 
@@ -65,8 +67,8 @@ class RouteUpdate(BaseModel):
     def validate_geometry(cls, value: Optional[str]) -> Optional[str]:
         if value is None:
             return value
-        if not _LINESTRING_RE.match(value.strip()):
-            raise ValueError("geometry must be a WKT LINESTRING")
+        if not _MULTILINESTRING_RE.match(value.strip()):
+            raise ValueError("geometry must be a WKT MULTILINESTRING")
         return value.strip()
 
 

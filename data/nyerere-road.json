@@ -1,0 +1,1925 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-09T11:27:59Z",
+    "timestamp_areas_base": "2026-01-22T23:45:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 23360491,
+      "bounds": {
+        "minlat": -6.8305357,
+        "minlon": 39.2712275,
+        "maxlat": -6.8296453,
+        "maxlon": 39.2728819
+      },
+      "geometry": [
+        {
+          "lat": -6.8296453,
+          "lon": 39.2728819
+        },
+        {
+          "lat": -6.8305357,
+          "lon": 39.2712275
+        }
+      ],
+      "tags": {
+        "construction": "yes",
+        "highway": "trunk",
+        "lane_markings": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25904044,
+      "bounds": {
+        "minlat": -6.8286274,
+        "minlon": 39.2743353,
+        "maxlat": -6.8275145,
+        "maxlon": 39.2760692
+      },
+      "geometry": [
+        {
+          "lat": -6.8286274,
+          "lon": 39.2743353
+        },
+        {
+          "lat": -6.8277305,
+          "lon": 39.2757479
+        },
+        {
+          "lat": -6.8275145,
+          "lon": 39.2760692
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 318504150,
+      "bounds": {
+        "minlat": -6.8438024,
+        "minlon": 39.2458095,
+        "maxlat": -6.8437573,
+        "maxlon": 39.2459135
+      },
+      "geometry": [
+        {
+          "lat": -6.8438024,
+          "lon": 39.2458095
+        },
+        {
+          "lat": -6.8437573,
+          "lon": 39.2459135
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 365832386,
+      "bounds": {
+        "minlat": -6.8420131,
+        "minlon": 39.2496679,
+        "maxlat": -6.8334571,
+        "maxlon": 39.2664711
+      },
+      "geometry": [
+        {
+          "lat": -6.8420131,
+          "lon": 39.2496679
+        },
+        {
+          "lat": -6.8416170,
+          "lon": 39.2504624
+        },
+        {
+          "lat": -6.8413494,
+          "lon": 39.2510021
+        },
+        {
+          "lat": -6.8413121,
+          "lon": 39.2510793
+        },
+        {
+          "lat": -6.8412775,
+          "lon": 39.2511584
+        },
+        {
+          "lat": -6.8395832,
+          "lon": 39.2545538
+        },
+        {
+          "lat": -6.8393647,
+          "lon": 39.2549195
+        },
+        {
+          "lat": -6.8379925,
+          "lon": 39.2576265
+        },
+        {
+          "lat": -6.8368341,
+          "lon": 39.2599547
+        },
+        {
+          "lat": -6.8356183,
+          "lon": 39.2624035
+        },
+        {
+          "lat": -6.8355800,
+          "lon": 39.2624742
+        },
+        {
+          "lat": -6.8350977,
+          "lon": 39.2634228
+        },
+        {
+          "lat": -6.8346516,
+          "lon": 39.2643495
+        },
+        {
+          "lat": -6.8341083,
+          "lon": 39.2654036
+        },
+        {
+          "lat": -6.8334571,
+          "lon": 39.2664711
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lanes": "2",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 365852537,
+      "bounds": {
+        "minlat": -6.8276157,
+        "minlon": 39.2761152,
+        "maxlat": -6.8275490,
+        "maxlon": 39.2762197
+      },
+      "geometry": [
+        {
+          "lat": -6.8275490,
+          "lon": 39.2762197
+        },
+        {
+          "lat": -6.8275733,
+          "lon": 39.2761839
+        },
+        {
+          "lat": -6.8276157,
+          "lon": 39.2761152
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 365852538,
+      "bounds": {
+        "minlat": -6.8275145,
+        "minlon": 39.2760692,
+        "maxlat": -6.8244588,
+        "maxlon": 39.2812768
+      },
+      "geometry": [
+        {
+          "lat": -6.8275145,
+          "lon": 39.2760692
+        },
+        {
+          "lat": -6.8274935,
+          "lon": 39.2761133
+        },
+        {
+          "lat": -6.8274761,
+          "lon": 39.2761446
+        },
+        {
+          "lat": -6.8273395,
+          "lon": 39.2763672
+        },
+        {
+          "lat": -6.8268657,
+          "lon": 39.2771926
+        },
+        {
+          "lat": -6.8266182,
+          "lon": 39.2775818
+        },
+        {
+          "lat": -6.8264378,
+          "lon": 39.2779581
+        },
+        {
+          "lat": -6.8262698,
+          "lon": 39.2783118
+        },
+        {
+          "lat": -6.8260361,
+          "lon": 39.2788210
+        },
+        {
+          "lat": -6.8258653,
+          "lon": 39.2791878
+        },
+        {
+          "lat": -6.8256936,
+          "lon": 39.2795154
+        },
+        {
+          "lat": -6.8255389,
+          "lon": 39.2797783
+        },
+        {
+          "lat": -6.8253142,
+          "lon": 39.2801391
+        },
+        {
+          "lat": -6.8247627,
+          "lon": 39.2809909
+        },
+        {
+          "lat": -6.8246654,
+          "lon": 39.2811132
+        },
+        {
+          "lat": -6.8245634,
+          "lon": 39.2811954
+        },
+        {
+          "lat": -6.8244588,
+          "lon": 39.2812768
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxheight": "default",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 365861476,
+      "bounds": {
+        "minlat": -6.8475793,
+        "minlon": 39.2378198,
+        "maxlat": -6.8457553,
+        "maxlon": 39.2416850
+      },
+      "geometry": [
+        {
+          "lat": -6.8475793,
+          "lon": 39.2378198
+        },
+        {
+          "lat": -6.8471804,
+          "lon": 39.2386580
+        },
+        {
+          "lat": -6.8466259,
+          "lon": 39.2398506
+        },
+        {
+          "lat": -6.8465969,
+          "lon": 39.2399102
+        },
+        {
+          "lat": -6.8465457,
+          "lon": 39.2400208
+        },
+        {
+          "lat": -6.8459032,
+          "lon": 39.2413453
+        },
+        {
+          "lat": -6.8458934,
+          "lon": 39.2413678
+        },
+        {
+          "lat": -6.8457553,
+          "lon": 39.2416850
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 365861477,
+      "bounds": {
+        "minlat": -6.8517534,
+        "minlon": 39.2302756,
+        "maxlat": -6.8489242,
+        "maxlon": 39.2354625
+      },
+      "geometry": [
+        {
+          "lat": -6.8489242,
+          "lon": 39.2354625
+        },
+        {
+          "lat": -6.8510722,
+          "lon": 39.2315245
+        },
+        {
+          "lat": -6.8515675,
+          "lon": 39.2306165
+        },
+        {
+          "lat": -6.8517534,
+          "lon": 39.2302756
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 366948147,
+      "bounds": {
+        "minlat": -6.8488334,
+        "minlon": 39.2353896,
+        "maxlat": -6.8475793,
+        "maxlon": 39.2378198
+      },
+      "geometry": [
+        {
+          "lat": -6.8488334,
+          "lon": 39.2353896
+        },
+        {
+          "lat": -6.8481533,
+          "lon": 39.2366774
+        },
+        {
+          "lat": -6.8475793,
+          "lon": 39.2378198
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 366948148,
+      "bounds": {
+        "minlat": -6.8579175,
+        "minlon": 39.2175240,
+        "maxlat": -6.8544382,
+        "maxlon": 39.2246204
+      },
+      "geometry": [
+        {
+          "lat": -6.8579175,
+          "lon": 39.2175240
+        },
+        {
+          "lat": -6.8577810,
+          "lon": 39.2178286
+        },
+        {
+          "lat": -6.8573248,
+          "lon": 39.2188232
+        },
+        {
+          "lat": -6.8568479,
+          "lon": 39.2198416
+        },
+        {
+          "lat": -6.8554430,
+          "lon": 39.2226475
+        },
+        {
+          "lat": -6.8552759,
+          "lon": 39.2229778
+        },
+        {
+          "lat": -6.8551020,
+          "lon": 39.2233369
+        },
+        {
+          "lat": -6.8548992,
+          "lon": 39.2237013
+        },
+        {
+          "lat": -6.8544382,
+          "lon": 39.2246204
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 366950666,
+      "bounds": {
+        "minlat": -6.8649195,
+        "minlon": 39.2031823,
+        "maxlat": -6.8631258,
+        "maxlon": 39.2064283
+      },
+      "geometry": [
+        {
+          "lat": -6.8631258,
+          "lon": 39.2064283
+        },
+        {
+          "lat": -6.8631746,
+          "lon": 39.2063171
+        },
+        {
+          "lat": -6.8632309,
+          "lon": 39.2061924
+        },
+        {
+          "lat": -6.8632908,
+          "lon": 39.2060694
+        },
+        {
+          "lat": -6.8633989,
+          "lon": 39.2058571
+        },
+        {
+          "lat": -6.8634730,
+          "lon": 39.2056999
+        },
+        {
+          "lat": -6.8641496,
+          "lon": 39.2042737
+        },
+        {
+          "lat": -6.8642986,
+          "lon": 39.2039911
+        },
+        {
+          "lat": -6.8644040,
+          "lon": 39.2037963
+        },
+        {
+          "lat": -6.8646862,
+          "lon": 39.2034107
+        },
+        {
+          "lat": -6.8649195,
+          "lon": 39.2031823
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lanes": "2",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 370574693,
+      "bounds": {
+        "minlat": -6.8244588,
+        "minlon": 39.2812768,
+        "maxlat": -6.8242229,
+        "maxlon": 39.2813816
+      },
+      "geometry": [
+        {
+          "lat": -6.8244588,
+          "lon": 39.2812768
+        },
+        {
+          "lat": -6.8243329,
+          "lon": 39.2813405
+        },
+        {
+          "lat": -6.8242229,
+          "lon": 39.2813816
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 370594936,
+      "bounds": {
+        "minlat": -6.8489242,
+        "minlon": 39.2354625,
+        "maxlat": -6.8459606,
+        "maxlon": 39.2416489
+      },
+      "geometry": [
+        {
+          "lat": -6.8459606,
+          "lon": 39.2416489
+        },
+        {
+          "lat": -6.8461363,
+          "lon": 39.2412100
+        },
+        {
+          "lat": -6.8467308,
+          "lon": 39.2398803
+        },
+        {
+          "lat": -6.8473430,
+          "lon": 39.2386035
+        },
+        {
+          "lat": -6.8478936,
+          "lon": 39.2374891
+        },
+        {
+          "lat": -6.8482639,
+          "lon": 39.2367552
+        },
+        {
+          "lat": -6.8485570,
+          "lon": 39.2362091
+        },
+        {
+          "lat": -6.8486849,
+          "lon": 39.2359543
+        },
+        {
+          "lat": -6.8488380,
+          "lon": 39.2356257
+        },
+        {
+          "lat": -6.8489242,
+          "lon": 39.2354625
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 370722460,
+      "bounds": {
+        "minlat": -6.8439442,
+        "minlon": 39.2455193,
+        "maxlat": -6.8438024,
+        "maxlon": 39.2458095
+      },
+      "geometry": [
+        {
+          "lat": -6.8439442,
+          "lon": 39.2455193
+        },
+        {
+          "lat": -6.8438573,
+          "lon": 39.2457117
+        },
+        {
+          "lat": -6.8438024,
+          "lon": 39.2458095
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 371098953,
+      "bounds": {
+        "minlat": -6.8580371,
+        "minlon": 39.2175748,
+        "maxlat": -6.8545028,
+        "maxlon": 39.2248314
+      },
+      "geometry": [
+        {
+          "lat": -6.8545028,
+          "lon": 39.2248314
+        },
+        {
+          "lat": -6.8546718,
+          "lon": 39.2245032
+        },
+        {
+          "lat": -6.8549817,
+          "lon": 39.2238790
+        },
+        {
+          "lat": -6.8553063,
+          "lon": 39.2232176
+        },
+        {
+          "lat": -6.8555690,
+          "lon": 39.2226966
+        },
+        {
+          "lat": -6.8561958,
+          "lon": 39.2214456
+        },
+        {
+          "lat": -6.8566809,
+          "lon": 39.2204774
+        },
+        {
+          "lat": -6.8568701,
+          "lon": 39.2201003
+        },
+        {
+          "lat": -6.8570164,
+          "lon": 39.2198027
+        },
+        {
+          "lat": -6.8573869,
+          "lon": 39.2189929
+        },
+        {
+          "lat": -6.8578098,
+          "lon": 39.2180775
+        },
+        {
+          "lat": -6.8578814,
+          "lon": 39.2179226
+        },
+        {
+          "lat": -6.8580371,
+          "lon": 39.2175748
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 371098954,
+      "bounds": {
+        "minlat": -6.8544382,
+        "minlon": 39.2246204,
+        "maxlat": -6.8522396,
+        "maxlon": 39.2290557
+      },
+      "geometry": [
+        {
+          "lat": -6.8544382,
+          "lon": 39.2246204
+        },
+        {
+          "lat": -6.8541508,
+          "lon": 39.2251933
+        },
+        {
+          "lat": -6.8538925,
+          "lon": 39.2256036
+        },
+        {
+          "lat": -6.8532347,
+          "lon": 39.2269595
+        },
+        {
+          "lat": -6.8531189,
+          "lon": 39.2273001
+        },
+        {
+          "lat": -6.8524615,
+          "lon": 39.2286119
+        },
+        {
+          "lat": -6.8522396,
+          "lon": 39.2290557
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372192958,
+      "bounds": {
+        "minlat": -6.8332954,
+        "minlon": 39.2667467,
+        "maxlat": -6.8305317,
+        "maxlon": 39.2710295
+      },
+      "geometry": [
+        {
+          "lat": -6.8332954,
+          "lon": 39.2667467
+        },
+        {
+          "lat": -6.8321468,
+          "lon": 39.2683955
+        },
+        {
+          "lat": -6.8316632,
+          "lon": 39.2690896
+        },
+        {
+          "lat": -6.8311606,
+          "lon": 39.2699245
+        },
+        {
+          "lat": -6.8305317,
+          "lon": 39.2710295
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "highway": "trunk",
+        "layer": "1",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372193561,
+      "bounds": {
+        "minlat": -6.8275490,
+        "minlon": 39.2762197,
+        "maxlat": -6.8242058,
+        "maxlon": 39.2814986
+      },
+      "geometry": [
+        {
+          "lat": -6.8242058,
+          "lon": 39.2814986
+        },
+        {
+          "lat": -6.8243949,
+          "lon": 39.2814324
+        },
+        {
+          "lat": -6.8245322,
+          "lon": 39.2813489
+        },
+        {
+          "lat": -6.8246844,
+          "lon": 39.2812353
+        },
+        {
+          "lat": -6.8247855,
+          "lon": 39.2811184
+        },
+        {
+          "lat": -6.8257178,
+          "lon": 39.2796182
+        },
+        {
+          "lat": -6.8265555,
+          "lon": 39.2778189
+        },
+        {
+          "lat": -6.8266593,
+          "lon": 39.2776183
+        },
+        {
+          "lat": -6.8268686,
+          "lon": 39.2773083
+        },
+        {
+          "lat": -6.8268864,
+          "lon": 39.2772835
+        },
+        {
+          "lat": -6.8273551,
+          "lon": 39.2765264
+        },
+        {
+          "lat": -6.8275490,
+          "lon": 39.2762197
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372193607,
+      "bounds": {
+        "minlat": -6.8421135,
+        "minlon": 39.2498574,
+        "maxlat": -6.8335570,
+        "maxlon": 39.2666057
+      },
+      "geometry": [
+        {
+          "lat": -6.8335570,
+          "lon": 39.2666057
+        },
+        {
+          "lat": -6.8335785,
+          "lon": 39.2665717
+        },
+        {
+          "lat": -6.8342042,
+          "lon": 39.2654693
+        },
+        {
+          "lat": -6.8347039,
+          "lon": 39.2644950
+        },
+        {
+          "lat": -6.8355140,
+          "lon": 39.2629001
+        },
+        {
+          "lat": -6.8357528,
+          "lon": 39.2624250
+        },
+        {
+          "lat": -6.8362455,
+          "lon": 39.2614460
+        },
+        {
+          "lat": -6.8367634,
+          "lon": 39.2604482
+        },
+        {
+          "lat": -6.8371590,
+          "lon": 39.2596006
+        },
+        {
+          "lat": -6.8376103,
+          "lon": 39.2587048
+        },
+        {
+          "lat": -6.8381776,
+          "lon": 39.2575917
+        },
+        {
+          "lat": -6.8387382,
+          "lon": 39.2564678
+        },
+        {
+          "lat": -6.8393054,
+          "lon": 39.2554083
+        },
+        {
+          "lat": -6.8396037,
+          "lon": 39.2548142
+        },
+        {
+          "lat": -6.8396929,
+          "lon": 39.2546178
+        },
+        {
+          "lat": -6.8408394,
+          "lon": 39.2523131
+        },
+        {
+          "lat": -6.8413776,
+          "lon": 39.2512879
+        },
+        {
+          "lat": -6.8414868,
+          "lon": 39.2510318
+        },
+        {
+          "lat": -6.8418314,
+          "lon": 39.2503940
+        },
+        {
+          "lat": -6.8421135,
+          "lon": 39.2498574
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lanes": "2",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372207757,
+      "bounds": {
+        "minlat": -6.8545028,
+        "minlon": 39.2248314,
+        "maxlat": -6.8519269,
+        "maxlon": 39.2299428
+      },
+      "geometry": [
+        {
+          "lat": -6.8519269,
+          "lon": 39.2299428
+        },
+        {
+          "lat": -6.8520385,
+          "lon": 39.2297213
+        },
+        {
+          "lat": -6.8525709,
+          "lon": 39.2286649
+        },
+        {
+          "lat": -6.8536319,
+          "lon": 39.2267164
+        },
+        {
+          "lat": -6.8541045,
+          "lon": 39.2257406
+        },
+        {
+          "lat": -6.8542866,
+          "lon": 39.2252724
+        },
+        {
+          "lat": -6.8545028,
+          "lon": 39.2248314
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372207759,
+      "bounds": {
+        "minlat": -6.8522396,
+        "minlon": 39.2290557,
+        "maxlat": -6.8515458,
+        "maxlon": 39.2303922
+      },
+      "geometry": [
+        {
+          "lat": -6.8522396,
+          "lon": 39.2290557
+        },
+        {
+          "lat": -6.8518058,
+          "lon": 39.2298898
+        },
+        {
+          "lat": -6.8516348,
+          "lon": 39.2301936
+        },
+        {
+          "lat": -6.8515458,
+          "lon": 39.2303922
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372207893,
+      "bounds": {
+        "minlat": -6.8515458,
+        "minlon": 39.2303922,
+        "maxlat": -6.8488334,
+        "maxlon": 39.2353896
+      },
+      "geometry": [
+        {
+          "lat": -6.8515458,
+          "lon": 39.2303922
+        },
+        {
+          "lat": -6.8499162,
+          "lon": 39.2333946
+        },
+        {
+          "lat": -6.8488334,
+          "lon": 39.2353896
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 372208489,
+      "bounds": {
+        "minlat": -6.8519269,
+        "minlon": 39.2299428,
+        "maxlat": -6.8517534,
+        "maxlon": 39.2302756
+      },
+      "geometry": [
+        {
+          "lat": -6.8517534,
+          "lon": 39.2302756
+        },
+        {
+          "lat": -6.8519269,
+          "lon": 39.2299428
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 379747698,
+      "bounds": {
+        "minlat": -6.8441056,
+        "minlon": 39.2459567,
+        "maxlat": -6.8440602,
+        "maxlon": 39.2460566
+      },
+      "geometry": [
+        {
+          "lat": -6.8440602,
+          "lon": 39.2460566
+        },
+        {
+          "lat": -6.8441056,
+          "lon": 39.2459567
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391244924,
+      "bounds": {
+        "minlat": -6.8442965,
+        "minlon": 39.2455414,
+        "maxlat": -6.8441056,
+        "maxlon": 39.2459567
+      },
+      "geometry": [
+        {
+          "lat": -6.8441056,
+          "lon": 39.2459567
+        },
+        {
+          "lat": -6.8441511,
+          "lon": 39.2458619
+        },
+        {
+          "lat": -6.8442965,
+          "lon": 39.2455414
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 446421776,
+      "bounds": {
+        "minlat": -6.8304343,
+        "minlon": 39.2712148,
+        "maxlat": -6.8295584,
+        "maxlon": 39.2728230
+      },
+      "geometry": [
+        {
+          "lat": -6.8304343,
+          "lon": 39.2712148
+        },
+        {
+          "lat": -6.8295584,
+          "lon": 39.2728230
+        }
+      ],
+      "tags": {
+        "construction": "yes",
+        "highway": "trunk",
+        "lane_markings": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 448221174,
+      "bounds": {
+        "minlat": -6.8242058,
+        "minlon": 39.2814986,
+        "maxlat": -6.8241232,
+        "maxlon": 39.2815156
+      },
+      "geometry": [
+        {
+          "lat": -6.8241232,
+          "lon": 39.2815156
+        },
+        {
+          "lat": -6.8242058,
+          "lon": 39.2814986
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 543404382,
+      "bounds": {
+        "minlat": -6.8579593,
+        "minlon": 39.2174294,
+        "maxlat": -6.8579175,
+        "maxlon": 39.2175240
+      },
+      "geometry": [
+        {
+          "lat": -6.8579593,
+          "lon": 39.2174294
+        },
+        {
+          "lat": -6.8579175,
+          "lon": 39.2175240
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 810025052,
+      "bounds": {
+        "minlat": -6.8647891,
+        "minlon": 39.2030733,
+        "maxlat": -6.8579593,
+        "maxlon": 39.2174294
+      },
+      "geometry": [
+        {
+          "lat": -6.8647891,
+          "lon": 39.2030733
+        },
+        {
+          "lat": -6.8645520,
+          "lon": 39.2033291
+        },
+        {
+          "lat": -6.8644782,
+          "lon": 39.2034293
+        },
+        {
+          "lat": -6.8642764,
+          "lon": 39.2037382
+        },
+        {
+          "lat": -6.8641619,
+          "lon": 39.2039733
+        },
+        {
+          "lat": -6.8640354,
+          "lon": 39.2042330
+        },
+        {
+          "lat": -6.8631353,
+          "lon": 39.2061514
+        },
+        {
+          "lat": -6.8630776,
+          "lon": 39.2062735
+        },
+        {
+          "lat": -6.8627886,
+          "lon": 39.2068699
+        },
+        {
+          "lat": -6.8618414,
+          "lon": 39.2088225
+        },
+        {
+          "lat": -6.8615852,
+          "lon": 39.2093500
+        },
+        {
+          "lat": -6.8607557,
+          "lon": 39.2110580
+        },
+        {
+          "lat": -6.8604917,
+          "lon": 39.2116070
+        },
+        {
+          "lat": -6.8601848,
+          "lon": 39.2122764
+        },
+        {
+          "lat": -6.8599152,
+          "lon": 39.2128599
+        },
+        {
+          "lat": -6.8595568,
+          "lon": 39.2136357
+        },
+        {
+          "lat": -6.8589356,
+          "lon": 39.2149740
+        },
+        {
+          "lat": -6.8586994,
+          "lon": 39.2155547
+        },
+        {
+          "lat": -6.8580604,
+          "lon": 39.2171752
+        },
+        {
+          "lat": -6.8580111,
+          "lon": 39.2172990
+        },
+        {
+          "lat": -6.8579593,
+          "lon": 39.2174294
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1021263484,
+      "bounds": {
+        "minlat": -6.8459606,
+        "minlon": 39.2416489,
+        "maxlat": -6.8442965,
+        "maxlon": 39.2455414
+      },
+      "geometry": [
+        {
+          "lat": -6.8442965,
+          "lon": 39.2455414
+        },
+        {
+          "lat": -6.8448619,
+          "lon": 39.2443593
+        },
+        {
+          "lat": -6.8453702,
+          "lon": 39.2432760
+        },
+        {
+          "lat": -6.8455964,
+          "lon": 39.2427749
+        },
+        {
+          "lat": -6.8459606,
+          "lon": 39.2416489
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "lane_markings": "no",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1021263485,
+      "bounds": {
+        "minlat": -6.8457553,
+        "minlon": 39.2416850,
+        "maxlat": -6.8439442,
+        "maxlon": 39.2455193
+      },
+      "geometry": [
+        {
+          "lat": -6.8457553,
+          "lon": 39.2416850
+        },
+        {
+          "lat": -6.8455256,
+          "lon": 39.2421144
+        },
+        {
+          "lat": -6.8453623,
+          "lon": 39.2424622
+        },
+        {
+          "lat": -6.8451825,
+          "lon": 39.2428585
+        },
+        {
+          "lat": -6.8446604,
+          "lon": 39.2439823
+        },
+        {
+          "lat": -6.8439442,
+          "lon": 39.2455193
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1021263486,
+      "bounds": {
+        "minlat": -6.8440602,
+        "minlon": 39.2460566,
+        "maxlat": -6.8421135,
+        "maxlon": 39.2498574
+      },
+      "geometry": [
+        {
+          "lat": -6.8421135,
+          "lon": 39.2498574
+        },
+        {
+          "lat": -6.8426724,
+          "lon": 39.2490323
+        },
+        {
+          "lat": -6.8431371,
+          "lon": 39.2480815
+        },
+        {
+          "lat": -6.8439403,
+          "lon": 39.2463146
+        },
+        {
+          "lat": -6.8440118,
+          "lon": 39.2461599
+        },
+        {
+          "lat": -6.8440602,
+          "lon": 39.2460566
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "lanes": "2",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1021263487,
+      "bounds": {
+        "minlat": -6.8437573,
+        "minlon": 39.2459135,
+        "maxlat": -6.8420131,
+        "maxlon": 39.2496679
+      },
+      "geometry": [
+        {
+          "lat": -6.8437573,
+          "lon": 39.2459135
+        },
+        {
+          "lat": -6.8437051,
+          "lon": 39.2460271
+        },
+        {
+          "lat": -6.8435633,
+          "lon": 39.2463384
+        },
+        {
+          "lat": -6.8430378,
+          "lon": 39.2474683
+        },
+        {
+          "lat": -6.8426090,
+          "lon": 39.2484306
+        },
+        {
+          "lat": -6.8420131,
+          "lon": 39.2496679
+        }
+      ],
+      "tags": {
+        "highway": "trunk_link",
+        "lane_markings": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1085674245,
+      "bounds": {
+        "minlat": -6.8631258,
+        "minlon": 39.2064283,
+        "maxlat": -6.8590893,
+        "maxlon": 39.2150318
+      },
+      "geometry": [
+        {
+          "lat": -6.8590893,
+          "lon": 39.2150318
+        },
+        {
+          "lat": -6.8595368,
+          "lon": 39.2139732
+        },
+        {
+          "lat": -6.8597278,
+          "lon": 39.2135592
+        },
+        {
+          "lat": -6.8608669,
+          "lon": 39.2111251
+        },
+        {
+          "lat": -6.8611159,
+          "lon": 39.2106067
+        },
+        {
+          "lat": -6.8619498,
+          "lon": 39.2088619
+        },
+        {
+          "lat": -6.8631258,
+          "lon": 39.2064283
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "maxspeed": "30",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1085674246,
+      "bounds": {
+        "minlat": -6.8590893,
+        "minlon": 39.2150318,
+        "maxlat": -6.8580371,
+        "maxlon": 39.2175748
+      },
+      "geometry": [
+        {
+          "lat": -6.8580371,
+          "lon": 39.2175748
+        },
+        {
+          "lat": -6.8580481,
+          "lon": 39.2175445
+        },
+        {
+          "lat": -6.8580723,
+          "lon": 39.2174829
+        },
+        {
+          "lat": -6.8582340,
+          "lon": 39.2170947
+        },
+        {
+          "lat": -6.8590893,
+          "lon": 39.2150318
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lanes": "2",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132163562,
+      "bounds": {
+        "minlat": -6.8334571,
+        "minlon": 39.2664711,
+        "maxlat": -6.8332954,
+        "maxlon": 39.2667467
+      },
+      "geometry": [
+        {
+          "lat": -6.8334571,
+          "lon": 39.2664711
+        },
+        {
+          "lat": -6.8332954,
+          "lon": 39.2667467
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132163567,
+      "bounds": {
+        "minlat": -6.8335570,
+        "minlon": 39.2666057,
+        "maxlat": -6.8310390,
+        "maxlon": 39.2703322
+      },
+      "geometry": [
+        {
+          "lat": -6.8310390,
+          "lon": 39.2703322
+        },
+        {
+          "lat": -6.8312834,
+          "lon": 39.2699151
+        },
+        {
+          "lat": -6.8317534,
+          "lon": 39.2692452
+        },
+        {
+          "lat": -6.8332808,
+          "lon": 39.2670671
+        },
+        {
+          "lat": -6.8335570,
+          "lon": 39.2666057
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "highway": "trunk",
+        "layer": "1",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132163568,
+      "bounds": {
+        "minlat": -6.8305317,
+        "minlon": 39.2710295,
+        "maxlat": -6.8304343,
+        "maxlon": 39.2712148
+      },
+      "geometry": [
+        {
+          "lat": -6.8305317,
+          "lon": 39.2710295
+        },
+        {
+          "lat": -6.8304343,
+          "lon": 39.2712148
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1183730233,
+      "bounds": {
+        "minlat": -6.8296453,
+        "minlon": 39.2728819,
+        "maxlat": -6.8287246,
+        "maxlon": 39.2743806
+      },
+      "geometry": [
+        {
+          "lat": -6.8287246,
+          "lon": 39.2743806
+        },
+        {
+          "lat": -6.8296453,
+          "lon": 39.2728819
+        }
+      ],
+      "tags": {
+        "access:conditional": "no @ (2023 May 28 - 2023 Sep 30)",
+        "highway": "trunk",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1183730234,
+      "bounds": {
+        "minlat": -6.8295584,
+        "minlon": 39.2728230,
+        "maxlat": -6.8286274,
+        "maxlon": 39.2743353
+      },
+      "geometry": [
+        {
+          "lat": -6.8295584,
+          "lon": 39.2728230
+        },
+        {
+          "lat": -6.8286274,
+          "lon": 39.2743353
+        }
+      ],
+      "tags": {
+        "access:conditional": "no @ (2023 May 28 - 2023 Sep 30)",
+        "highway": "trunk",
+        "lit": "no",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1311472867,
+      "bounds": {
+        "minlat": -6.8310390,
+        "minlon": 39.2703322,
+        "maxlat": -6.8305357,
+        "maxlon": 39.2712275
+      },
+      "geometry": [
+        {
+          "lat": -6.8305357,
+          "lon": 39.2712275
+        },
+        {
+          "lat": -6.8309811,
+          "lon": 39.2704348
+        },
+        {
+          "lat": -6.8310390,
+          "lon": 39.2703322
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "name": "Nyerere Road",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1468707393,
+      "bounds": {
+        "minlat": -6.8287246,
+        "minlon": 39.2743806,
+        "maxlat": -6.8276157,
+        "maxlon": 39.2761152
+      },
+      "geometry": [
+        {
+          "lat": -6.8276157,
+          "lon": 39.2761152
+        },
+        {
+          "lat": -6.8281750,
+          "lon": 39.2752404
+        },
+        {
+          "lat": -6.8287246,
+          "lon": 39.2743806
+        }
+      ],
+      "tags": {
+        "highway": "trunk",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Nyerere Road",
+        "name:etymology:wikidata": "Q186525",
+        "oneway": "yes",
+        "ref": "T24",
+        "source:ref": "Tanroads",
+        "surface": "concrete"
+      }
+    }
+  ]
+}
